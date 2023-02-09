@@ -45,8 +45,8 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void saveUser(String name, String lastName, byte age) {
         try (SessionFactory sessionFactory = Util.connectHibernate(); Session session = sessionFactory.openSession()) {
-
             session.save(new User(name, lastName, age));
+            System.out.printf("User с именем – %s добавлен в базу данных\n", name);
         }
     }
 
