@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th> Model </th>
+                <th> DriveUnit </th>
+                <th> Price </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  th:each = "car : ${cars}">
+                <td><span th:text="${car.getModel()}"> Model </span></td>
+                <td><span th:text="${car.getDriveUnit()}"> DriveUnit </span></td>
+                <td><span th:text="${car.getPrice()}"> Price </span></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
